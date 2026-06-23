@@ -16,7 +16,7 @@ export const projects: Project[] = [
         title: "Emma's Personal Portfolio",
         description: "What you're looking at now! Includes a personal summary, experience, projects and contact details sections.",
         image: project1Image,
-        tags: ["React", "TypesScript", "Vite", "Tailwind CSS"],
+        tags: ["React", "TypeScript", "Vite", "Tailwind CSS"],
         githubUrl: "https://github.com/emmatemiha/emma-portfolio"
     },
     {
@@ -24,6 +24,6 @@ export const projects: Project[] = [
         title: "Adventures in Aotearoa",
         description: "Travel blog website which communicates with a RESTful API. Features include user authentication, blog CRUD, search/filter/sort/pagination, nested comments, reactions and user profile management",
         image: project2Image,
-        tags: ["React", "TypesScript", "Vite", "MUI"]
+        tags: ["React", "TypeScript", "Vite", "MUI"]
     }
 ]
