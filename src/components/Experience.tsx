@@ -3,7 +3,7 @@ import { experiences } from '../data/experience'
 export default function Experience() {
     return (
         <div className="pt-24 px-8 min-h-screen max-w-5xl mx-auto">
-            <h2 className="text-4xl font-serif font-bold text-burgundy text-center mb-16 underline">
+            <h2 className="text-4xl font-serif font-bold text-burgundy text-center mb-12 underline">
                 Experience
             </h2>
 
