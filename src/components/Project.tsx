@@ -14,9 +14,9 @@ export default function Projects() {
                 {projects.map((project) => (
                     <div key={project.id} className="group flex flex-col rounded-xl border border-burgundy/10 bg-white shadow-sm">
                         {/*image*/}
-                        <div className="aspect-video w-full overflow-hidden rounded-t-xl bg-burgundy/5">
+                        <div className="aspect-video w-full overflow-hidden rounded-t-xl bg-burgundy/5 border border-burgundy/10 shadow-sm">
                             <img src={project.image} alt={project.title}
-                                className="h-full w-full object-cover"
+                                className="h-full w-full object-cover cursor-pointer transition-transform duration-300 ease-in-out group-hover:scale-110"
                                 onClick={() => setSelectedImage(project.image)}
                             />
                         </div>

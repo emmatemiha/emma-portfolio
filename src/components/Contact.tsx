@@ -5,10 +5,10 @@ import mailIcon from "../assets/icons/mail.png";
 export default function Contact() {
     return (
         <div className="pt-24 px-8 min-h-screen max-w-5xl mx-auto">
-            <h2 className="text-4xl font-serif font-bold text-burgundy text-center mb-8 mt-8 underline">
+            <h2 className="text-4xl font-serif font-bold text-burgundy text-center mb-8 underline">
                 Contact Me
             </h2>
-            <p className= "text-lg font-serif text-burgundy-light text-center mb-28">
+            <p className="text-lg text-burgundy-light text-center mb-28">
                 Whether you have a project idea in mind or just want to connect, I'm always open to new opportunities!
             </p>
 

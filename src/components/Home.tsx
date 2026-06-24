@@ -37,12 +37,21 @@ export default function Home() {
             <h1 className="text-3xl text-center font-serif text-burgundy mb-9">Tech Stack</h1>
 
             <div className="flex justify-center items-center gap-6">
-                <img src={pythonIcon} alt="Python" className="w-15 h-15" />
-                <img src={javascriptIcon} alt="JavaScript" className="w-15 h-15" />
-                <img src={typescriptIcon} alt="TypeScript" className="w-15 h-15" />
-                <img src={htmlIcon} alt="HTML" className="w-15 h-15" />
-                <img src={tailwindIcon} alt="Tailwind CSS" className="w-15 h-15" />
-                <img src={reactIcon} alt="React" className="w-15 h-15" />
+                {[
+                    { src: pythonIcon, name: 'Python' },
+                    { src: javascriptIcon, name: 'JavaScript' },
+                    { src: typescriptIcon, name: 'TypeScript' },
+                    { src: htmlIcon, name: 'HTML' },
+                    { src: tailwindIcon, name: 'Tailwind CSS' },
+                    { src: reactIcon, name: 'React' },
+                ].map((tech) => (
+                    <div key={tech.name} className="relative group flex flex-col items-center">
+                        <img src={tech.src} alt={tech.name} className="w-15 h-15" />
+                        <span className="mt-2 text-xs text-burgundy opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            {tech.name}
+                        </span>
+                    </div>
+                ))}
             </div>
         </div>
     )
