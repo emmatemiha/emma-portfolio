@@ -27,7 +27,7 @@ export default function Experience() {
                             <div key={exp.id} className="relative flex items-center mb-4">
                                 <div className="w-1/2 pr-12">
                                     {isLeft && (
-                                        <div className="bg-white rounded-xl p-6 shadow-sm border border-accent-border text-right">
+                                        <div className="bg-white rounded-xl p-6 shadow-sm border border-navbar-line text-right">
                                             <p className="text-roles text-sm mb-1">{exp.date}</p>
                                             <h3 className="text-lg font-serif font-bold text-firstname mb-1">{exp.title}</h3>
                                             <p className="text-lastname text-sm font-medium mb-3">{exp.company}</p>
@@ -41,7 +41,7 @@ export default function Experience() {
 
                                 <div className="w-1/2 pl-12">
                                     {!isLeft && (
-                                        <div className="bg-white rounded-xl p-6 shadow-sm border border-accent-border">
+                                        <div className="bg-white rounded-xl p-6 shadow-sm border border-navbar-line">
                                             <p className="text-roles text-sm mb-1">{exp.date}</p>
                                             <h3 className="text-lg font-serif font-bold text-firstname mb-1">{exp.title}</h3>
                                             <p className="text-lastname text-sm font-medium mb-3">{exp.company}</p>

@@ -54,7 +54,7 @@ export default function Home() {
 
             <div className="px-8 max-w-5xl mx-auto mb-8">
                 <div className="flex flex-wrap justify-center gap-6">
-                    {[ 'Python', 'JavaScript', 'TypeScript', 'HTML', 'Tailwind CSS', 'React'
+                    {[ 'Python', 'JavaScript', 'TypeScript', 'C++', 'HTML', 'Tailwind CSS', 'React'
                     ].map((tech) => (
                         <div key={tech} className="flex items-center gap-2 bg-white border border-accent-border rounded-full px-4 py-2">
                             <div className="w-2 h-2 rounded-full bg-titles" />
