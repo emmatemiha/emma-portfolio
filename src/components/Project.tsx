@@ -7,7 +7,7 @@ export default function Projects() {
     return (
         <div className="pt-6 px-8 min-h-screen max-w-8xl mx-auto">
 
-            <div className="flex items-center gap-4 mb-10 px-8 mt-4">
+            <div className="flex items-center gap-4 mb-8 px-8 mt-4">
                 <div className="h-px flex-1 bg-gradient-to-r from-transparent via-accent-border" />
                 <span className="text-diamonds">✦</span>
                 <div className="h-px flex-1 bg-gradient-to-l from-transparent via-accent-border" />

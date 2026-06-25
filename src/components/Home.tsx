@@ -4,7 +4,7 @@ export default function Home() {
     return (
         <div className="pt-24 min-h-screen">
             <div className="px-8 max-w-5xl mx-auto">
-                <div className="flex flex-col sm:flex-row items-center justify-between gap-12 mb-16">
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-12 mb-12">
                     
                     <div className="flex flex-col">
                         <h1 className="text-6xl font-serif font-semibold text-firstname mt-5 mb-2">Emma</h1>
@@ -44,7 +44,7 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="flex items-center gap-4 mb-8 px-8">
+            <div className="flex items-center gap-4 mb-10 px-8">
                 <div className="h-px flex-1 bg-gradient-to-r from-transparent via-accent-border" />
                 <span className="text-diamonds">✦</span>
                 <span className="font-script text-3xl text-titles">tech stack</span>

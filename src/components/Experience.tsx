@@ -3,7 +3,7 @@ import { experiences } from '../data/experience'
 export default function Experience() {
     return (
         <div className="min-h-screen">
-            <div className="flex items-center gap-4 mb-16 px-8 mt-4">
+            <div className="flex items-center gap-4 mb-11 pt-6">
                 <div className="h-px flex-1 bg-gradient-to-r from-transparent via-accent-border" />
                 <span className="text-diamonds">✦</span>
                 <div className="h-px flex-1 bg-gradient-to-l from-transparent via-accent-border" />
