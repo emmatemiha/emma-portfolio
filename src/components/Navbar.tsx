@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-const links = ['home', 'experience', 'projects', 'contact']
+const links = ['about', 'experience', 'projects', 'contact']
 
 export default function Navbar() {
   const [time, setTime] = useState(new Date());
@@ -16,7 +16,6 @@ export default function Navbar() {
     timeZone: "Pacific/Auckland",
     hour: '2-digit',
     minute: '2-digit',
-    second: '2-digit',
     hour12: true,
   });
 
@@ -26,14 +25,15 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-cream border-b border-burgundy/20 px-8 py-4 flex justify-between items-center">
-      <ul className="flex gap-8 text-burgundy font-semibold">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-page border-b border-navbar-line px-8 py-4 flex justify-between items-center">
+      <div className="text-lastname font-script text-xl">emma.</div>
+      <ul className="flex gap-8 text-navbar-text flex justify-center items-center">
         {links.map(link => (
           <li key={link}>
             <a
               href={`#${link}`}
               onClick={(e) => handleClick(e, link)}
-              className="capitalize text-burgundy-light hover:text-burgundy transition-colors duration-200"
+              className="text-navbar-text hover:text-firstname transition-colors duration-200"
             >
               {link}
             </a>
@@ -41,8 +41,8 @@ export default function Navbar() {
         ))}
       </ul>
 
-      <div className="text-burgundy-light font-mono font-semibold">
-        🕔 NZT {formattedTime}
+      <div className="text-roles text-right text-sm">
+        NZT {formattedTime}
       </div>
     </nav>
   )

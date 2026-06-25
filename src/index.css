@@ -3,12 +3,35 @@
 @theme {
   --color-burgundy: #800020;
   --color-burgundy-light: #960227;
-  --color-cream: #F8F5F0;
+  --color-cream: #fdf6f0;
   --color-dark: #212121;
+
+  /*home page text*/
+  --color-page: #fdf6f0;
+  --color-firstname: #3d1a2e;
+  --color-lastname: #8b2252;
+  --color-roles: #b87896;
+  --color-summary: #5a3a4a;
+  --color-navbar-line: #ebd9d1;
+  --color-navbar-text: #8b2353;
+
+  /*home page square+circle picture*/
+  --color-accent-border: #e8c4d4;
+  --color-accent: #fae5ef;
+  --color-tape: #f2dfe7;
+
+  /*diamonds, dots, buttons, section titles*/
+  --color-diamonds: #d4a0b8;
+  --color-titles: #c4688e;
+
+  /*fonts*/
+  --font-serif: 'Playfair Display', serif;
+  --font-script: 'Dancing Script', cursive;
+  --font-sans: 'DM Sans', sans-serif;
 }
 
 body {
-  background-color: #F8F5F0;
+  background-color: #fdf6f0;
 }
 
 ::-webkit-scrollbar {

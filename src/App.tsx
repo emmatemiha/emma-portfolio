@@ -6,10 +6,10 @@ import Contact from './components/Contact'
 
 function App() {
   return (
-    <div className="bg-cream text-dark min-h-screen">
+    <div className="bg-page text-summary min-h-screen">
       <Navbar />
       <main>
-        <section id="home">
+        <section id="about">
           <Home />
         </section>
         <section id="experience">

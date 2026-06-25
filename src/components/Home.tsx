@@ -5,6 +5,7 @@ import pythonIcon from "../assets/icons/python.svg";
 import reactIcon from "../assets/icons/react.svg";
 import tailwindIcon from "../assets/icons/tailwind.svg";
 import typescriptIcon from "../assets/icons/typescript.svg";
+import { projects } from "../data/project";
 
 export default function Home() {
     return (
@@ -12,17 +13,25 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row items-center justify-between gap-12 mb-16">
                 
                 <div className="flex flex-col">
-                    <h1 className="text-6xl font-serif font-bold text-burgundy mt-5">
-                        Emma Te Miha
-                    </h1>
-                    <p className="text-burgundy-light mb-10 text-lg">
-                        CS Student · Frontend Developer · Designer 
+                    <h1 className="text-6xl font-serif font-semibold text-firstname mt-5 mb-2">Emma</h1>
+                    <h1 className="text-7xl font-script font-bold text-lastname mb-10">Te Miha</h1>
+                    <p className="font-sans text-roles mb-10">
+                        CS STUDENT · FRONTEND DEVELOPER · DESIGNER 
                     </p>
-                    <p className="text-dark max-w-lg text-lg">
+                    <p className="font-sans text-summary max-w-lg mb-10">
                         Kia Ora! I'm a final-year Computer Science student at the University of Canterbury who enjoys
-                        building fun web interfaces and exploring the creative side of software. My interests span a range
-                        of design areas, from front-end development to motion graphics and 3D design.
+                        building fun web interfaces and exploring the creative side of software.
                     </p>
+
+                    <div className="mt-auto flex justify-center">
+                        <a
+                            href="#projects"
+                            onClick={(e) => { e.preventDefault(); document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' }) }}
+                            className="bg-lastname text-page text-sm px-4 py-2 rounded-full hover:bg-firstname hover:text-page transition-colors"
+                        >
+                            View my work
+                        </a>
+                    </div>
                 </div>
 
                 <div className="flex-shrink-0">
@@ -32,7 +41,7 @@ export default function Home() {
                 </div>
             </div>
 
-            <hr className="border-t border-burgundy/30 mb-12" />
+            <hr className="border-t border-burgundy/30 mb-12 fading-divider" />
 
             <h1 className="text-3xl text-center font-serif text-burgundy mb-9">Tech Stack</h1>
 
