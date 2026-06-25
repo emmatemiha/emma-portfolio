@@ -26,14 +26,16 @@ export const projects: Project[] = [
         title: "Adventures in Aotearoa",
         description: "Travel blog website which communicates with a RESTful API. Features include user authentication, blog CRUD, search/filter/sort/pagination, nested comments, reactions and user profile management",
         image: project2Image,
-        tags: ["React", "TypeScript", "Vite", "MUI"]
+        tags: ["React", "TypeScript", "Vite", "MUI"],
+        githubUrl: "https://github.com/emmatemiha/travel-blog"
     },
     {
         id: 3,
         title: "Alien Theme Park",
         description: "An animated OpenGL scene set on a small alien planet featuring a spaceship pendulum ride, moving alien characters, dynamic lighting, planar shadows and physics-based pendulum motion.",
         image: project3Image,
-        tags: ["C++", "OpenGL 2"]
+        tags: ["C++", "OpenGL 2"],
+        githubUrl: "https://github.com/emmatemiha/alien-theme-park"
     },
     {
         id: 4,
