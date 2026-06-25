@@ -1,5 +1,4 @@
 import emmaImage from "../assets/images/me.png";
-import { projects } from "../data/project";
 
 export default function Home() {
     return (
@@ -39,7 +38,7 @@ export default function Home() {
                                 style={{ objectPosition: '20% -40%' }}
                             />
                             <p className="text-lastname font-script text-2xl">me ⤴</p>
-                            <p className="text-roles font-sans text-xs text-center">enjoys: weighlifting, hiking, watching shows & animals!</p>
+                            <p className="text-roles font-sans text-xs text-center">enjoys: weighlifting, hiking, watching shows & cats!</p>
                         </div>
                     </div>
                 </div>
@@ -53,7 +52,7 @@ export default function Home() {
                 <div className="h-px flex-1 bg-gradient-to-l from-transparent via-accent-border" />
             </div>
 
-            <div className="px-8 max-w-5xl mx-auto">
+            <div className="px-8 max-w-5xl mx-auto mb-8">
                 <div className="flex flex-wrap justify-center gap-6">
                     {[ 'Python', 'JavaScript', 'TypeScript', 'HTML', 'Tailwind CSS', 'React'
                     ].map((tech) => (
