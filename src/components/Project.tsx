@@ -19,11 +19,11 @@ export default function Projects() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {projects.map((project) => (
-                    <div key={project.id} className="group flex flex-col rounded-xl border border-navbar-line bg-white shadow-sm">
+                    <div key={project.id} className="group flex flex-col rounded-xl border border-accent-border bg-white shadow-sm">
                         {/*image*/}
-                        <div className="aspect-video w-full overflow-hidden rounded-t-xl bg-navbar-line/5 border border-navbar-line/10 shadow-sm">
+                        <div className="aspect-video w-full overflow-hidden rounded-t-xl shadow-sm">
                             <img src={project.image} alt={project.title}
-                                className="h-full w-full object-cover cursor-pointer transition-transform duration-300 ease-in-out group-hover:scale-110"
+                                className="h-full w-full object-cover cursor-pointer transition-transform duration-300 ease-in-out group-hover:scale-107"
                                 onClick={() => setSelectedImage(project.image)}
                             />
                         </div>

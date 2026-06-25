@@ -21,14 +21,14 @@ export default function Home() {
                             <a
                                 href="#projects"
                                 onClick={(e) => { e.preventDefault(); document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' }) }}
-                                className="bg-lastname text-page text-sm px-4 py-2 rounded-full hover:bg-firstname hover:text-page transition-colors"
+                                className="bg-lastname text-page text-sm px-4 py-2 rounded-full hover:bg-button hover:text-page transition-colors shadow-sm"
                             >
                                 View my work
                             </a>
                         </div>
                     </div>
 
-                    <div className="relative flex-shrink-0 w-64 md:w-80 -rotate-2">
+                    <div className="relative flex-shrink-0 w-64 md:w-80 -rotate-2 hover:-translate-y-1 transition-transform duration-400">
                         <div className="absolute w-64 md:w-80 h-full bg-tape top-2 left-2 rounded-sm" />
                         <div className="absolute w-64 md:w-80 h-full bg-accent-border top-1 left-1 rounded-sm" />
                         <div className="relative w-64 md:w-80 flex flex-col bg-white items-center rounded-sm px-6 pt-6 pb-6">
@@ -56,7 +56,7 @@ export default function Home() {
                 <div className="flex flex-wrap justify-center gap-6">
                     {[ 'Python', 'JavaScript', 'TypeScript', 'C++', 'HTML', 'Tailwind CSS', 'React'
                     ].map((tech) => (
-                        <div key={tech} className="flex items-center gap-2 bg-white border border-accent-border rounded-full px-4 py-2">
+                        <div key={tech} className="flex items-center gap-2 bg-white border border-accent-border rounded-full px-4 py-2 hover:scale-110 transition-all ease-in-out duration-300">
                             <div className="w-2 h-2 rounded-full bg-titles" />
                             <span className="text-sm text-lastname">{tech}</span>
                         </div>
