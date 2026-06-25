@@ -26,7 +26,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-page border-b border-navbar-line px-8 py-4 flex justify-between items-center">
-      <div className="text-lastname font-script text-xl">emma.</div>
+      <div className="text-lastname font-script text-2xl">emma.</div>
       <ul className="flex gap-8 text-navbar-text flex justify-center items-center">
         {links.map(link => (
           <li key={link}>

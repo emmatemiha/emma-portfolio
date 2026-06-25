@@ -1,10 +1,4 @@
-import avatarImage from "../assets/images/avatar.svg";
-import htmlIcon from "../assets/icons/html-5.svg";
-import javascriptIcon from "../assets/icons/javascript.svg";
-import pythonIcon from "../assets/icons/python.svg";
-import reactIcon from "../assets/icons/react.svg";
-import tailwindIcon from "../assets/icons/tailwind.svg";
-import typescriptIcon from "../assets/icons/typescript.svg";
+import emmaImage from "../assets/images/me.png";
 import { projects } from "../data/project";
 
 export default function Home() {
@@ -34,31 +28,37 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className="flex-shrink-0">
-                    <img src={avatarImage} alt="Emma"
-                        className="w-64 h-64 rounded-full object-cover border-4 border-burgundy/30 shadow-[0_2px_6px_rgba(0,0,0,0.12)]"
-                    />
+                <div className="relative flex-shrink-0 w-64 md:w-80 -rotate-2">
+                    <div className="absolute w-64 md:w-80 h-full bg-tape top-2 left-2 rounded-sm" />
+                    <div className="absolute w-64 md:w-80 h-full bg-accent-border top-1 left-1 rounded-sm" />
+                    <div className="relative w-64 md:w-80 flex flex-col bg-white items-center rounded-sm px-6 pt-6 pb-6">
+                        <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-5 bg-tape opacity-70 rounded-sm" />
+                        <img src={emmaImage} alt="Emma"
+                            className="w-48 h-48 rounded-full object-cover bg-accent border-4 border-accent-border mb-4"
+                            style={{ objectPosition: '20% -40%' }}
+                        />
+                        <p className="text-lastname font-script text-2xl">me ⤴</p>
+                        <p className="text-roles font-sans text-xs text-center">enjoys: weighlifting, hiking, watching shows & animals!</p>
+                    </div>
                 </div>
+
+                
             </div>
 
-            <hr className="border-t border-burgundy/30 mb-12 fading-divider" />
+            <div className="flex items-center jstify-center gap-4 mb-8">
+                <div className="h-px flex-1 bg-gradient-to-r from-transparent to-accent-border" />
+                <span className="text-diamonds">✦</span>
+                <span className="font-script text-3xl text-titles">tech stack</span>
+                <span className="text-diamonds">✦</span>
+                <div className="h-px flex-1 bg-gradient-to-l from-transparent to-accent-border" />
+            </div>
 
-            <h1 className="text-3xl text-center font-serif text-burgundy mb-9">Tech Stack</h1>
-
-            <div className="flex justify-center items-center gap-6">
-                {[
-                    { src: pythonIcon, name: 'Python' },
-                    { src: javascriptIcon, name: 'JavaScript' },
-                    { src: typescriptIcon, name: 'TypeScript' },
-                    { src: htmlIcon, name: 'HTML' },
-                    { src: tailwindIcon, name: 'Tailwind CSS' },
-                    { src: reactIcon, name: 'React' },
+            <div className="flex flex-wrap justify-center gap-6">
+                {[ 'Python', 'JavaScript', 'TypeScript', 'HTML', 'Tailwind CSS', 'React'
                 ].map((tech) => (
-                    <div key={tech.name} className="relative group flex flex-col items-center">
-                        <img src={tech.src} alt={tech.name} className="w-15 h-15" />
-                        <span className="mt-2 text-xs text-burgundy opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                            {tech.name}
-                        </span>
+                    <div key={tech} className="flex items-center gap-2 bg-white border border-accent-border rounded-full px-4 py-2">
+                        <div className="w-2 h-2 rounded-full bg-titles" />
+                        <span className="text-sm text-lastname">{tech}</span>
                     </div>
                 ))}
             </div>
