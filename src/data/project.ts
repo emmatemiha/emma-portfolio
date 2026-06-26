@@ -42,6 +42,7 @@ export const projects: Project[] = [
         title: "Ray Tracer",
         description: "A ray-traced scene featuring reflections, refraction, shadows, multiple light sources, anti-aliasing, stochastic sampling and textured objects.",
         image: project4Image,
-        tags: ["C++", "OpenGL 4"]
+        tags: ["C++", "OpenGL 4"],
+        githubUrl: "https://github.com/emmatemiha/ray-tracer.git"
     }
 ]

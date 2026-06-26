@@ -25,8 +25,8 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-page border-b border-navbar-line px-8 py-4 flex justify-between items-center">
-      <div className="text-lastname font-script text-2xl">emma.</div>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-page border-b border-navbar-line px-8 py-4 flex justify-center md:justify-between items-center">
+      <div className="text-lastname font-script text-2xl hidden md:block">emma.</div>
       <ul className="flex gap-8 text-navbar-text flex justify-center items-center">
         {links.map(link => (
           <li key={link}>
@@ -41,7 +41,7 @@ export default function Navbar() {
         ))}
       </ul>
 
-      <div className="text-roles text-right text-sm">
+      <div className="text-roles text-right text-sm hidden md:block">
         NZT {formattedTime}
       </div>
     </nav>

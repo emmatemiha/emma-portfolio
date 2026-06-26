@@ -17,14 +17,14 @@ export default function Contact() {
                 Whether you have a project idea in mind or just want to connect, I'm always open to new opportunities!
             </p>
 
-            <div className="gap-6 flex justify-center items-center mb-16">
-                <div className="flex items-center gap-4 mb-4">
+            <div className="gap-6 flex flex-col md:flex-row justify-center items-center mb-16">
+                <div className="flex items-center gap-4 mb-1">
                     <a href="https://github.com/emmatemiha" className="flex items-center gap-2 bg-white border border-accent-border rounded-full px-4 py-2 hover:scale-110 hover:bg-accent/40 transition-all ease-in-out duration-300 transform-gpu">
                         <img src={githubIcon} alt="Github" className="w-9 h-9 object-contain"/>
                         <span className= "text-md text-lastname">emmatemiha</span>
                     </a>
                 </div>
-                <div className="flex items-center gap-4 mb-4">
+                <div className="flex items-center gap-4 mb-1">
                     <a href="mailto:emmatemiha@gmail.com" className="flex items-center gap-2 bg-white border border-accent-border rounded-full px-4 py-2 hover:scale-110 hover:bg-accent/40 transition-all ease-in-out duration-300 transform-gpu">
                         <img src={mailIcon} alt="Mail" className="w-9 h-9 object-contain"/>
                         <span className= "text-md text-lastname">emmatemiha@gmail.com</span>
