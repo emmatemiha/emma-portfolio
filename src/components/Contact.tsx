@@ -30,7 +30,7 @@ export default function Contact() {
                         <span className= "text-md text-lastname">emmatemiha@gmail.com</span>
                     </a>
                 </div>
-                <div className="flex items-center gap-4 mb-4">
+                <div className="flex items-center gap-4 mb-1">
                     <a href="https://linkedin.com/in/emmatemiha" className="flex items-center gap-2 bg-white border border-accent-border rounded-full px-4 py-2 hover:scale-110 hover:bg-accent/40 transition-all ease-in-out duration-300 transform-gpu">
                         <img src={linkedinIcon} alt="Linkedin" className="w-9 h-9 object-contain"/>
                         <span className= "text-md text-lastname">emmatemiha</span>
