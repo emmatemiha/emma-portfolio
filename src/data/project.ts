@@ -1,7 +1,7 @@
-import project1Image from "../assets/images/project1.png";
-import project2Image from "../assets/images/project2.png";
-import project3Image from "../assets/images/project3.png";
-import project4Image from "../assets/images/project4.png";
+import project1Image from "../assets/images/project1.2.png";
+import project2Image from "../assets/images/project2.2.png";
+import project3Image from "../assets/images/project3.2.png";
+import project4Image from "../assets/images/project4.2.png";
 
 export interface Project {
     id: number

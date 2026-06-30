@@ -1,11 +1,15 @@
 import emmaImage from "../assets/images/me.png"
 import Footer from './Footer'
+import { Link } from 'react-router-dom'
+import { projects } from '../data/project'
 
 export default function Home() {
+    const featuredProjects = projects.slice(0, 4)
+
     return (
         <div className="pt-24 min-h-screen">
             <div className="px-8 max-w-5xl mx-auto">
-                <div className="flex flex-col sm:flex-row items-center justify-between gap-12 mb-12">
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-12 mb-16 md:mb-8">
                     
                     <div className="flex flex-col">
                         <h1 className="text-6xl font-serif font-semibold text-firstname mt-5 mb-2">Emma</h1>
@@ -17,16 +21,6 @@ export default function Home() {
                             Kia Ora! I'm a final-year Computer Science student at the University of Canterbury who enjoys
                             building fun web interfaces and exploring the creative side of software.
                         </p>
-
-                        <div className="mt-auto flex justify-center">
-                            <a
-                                href="#projects"
-                                onClick={(e) => { e.preventDefault(); document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' }) }}
-                                className="bg-lastname text-page text-sm px-4 py-2 rounded-full hover:bg-button hover:text-page transition-colors shadow-sm"
-                            >
-                                View my work
-                            </a>
-                        </div>
                     </div>
 
                     <div className="relative flex-shrink-0 w-64 md:w-80 -rotate-2 hover:-translate-y-1 transition-transform duration-400">
@@ -64,6 +58,61 @@ export default function Home() {
                     ))}
                 </div>
             </div>
+
+            <div className="flex items-center gap-4 mb-11 pt-6">
+                <div className="h-px flex-1 bg-gradient-to-r from-transparent via-accent-border" />
+                <span className="text-diamonds">✦</span>
+                <div className="h-px flex-1 bg-gradient-to-l from-transparent via-accent-border" />
+            </div>
+
+            <div className="px-8 max-w-5xl mx-auto mb-16">
+                <h2 className="text-3xl font-script text-lastname text-center mb-12">Featured Projects</h2>
+
+                <div className="flex flex-col gap-16">
+                    {featuredProjects.map((project, index) => {
+                        const isLeft = index % 2 === 0
+                        return (
+                            <div
+                                key={project.id}
+                                className={`flex flex-col md:flex-row items-center gap-8 ${!isLeft ? 'md:flex-row-reverse' : ''}`}
+                            >
+                                <div className="flex-1">
+                                    <img
+                                        src={project.image}
+                                        alt={project.title}
+                                        className="w-full rounded-xl"
+                                    />
+                                </div>
+
+                                <div className={`flex-1 flex flex-col ${isLeft ? 'md:items-start md:text-left' : 'md:items-end md:text-right'} items-center text-center`}>
+                                    <h3 className="font-serif font-bold text-2xl text-firstname mb-3">{project.title}</h3>
+                                    <p className="text-summary mb-4 max-w-md">{project.description}</p>
+                                    <div className={`flex flex-wrap gap-2 mb-5 ${isLeft ? 'justify-start' : 'justify-end'} justify-center`}>
+                                        {project.tags.map((tag) => (
+                                            <span key={tag} className="bg-accent text-lastname text-xs px-3 py-1 rounded-full">{tag}</span>
+                                        ))}
+                                    </div>
+                                    <a
+                                        href={project.githubUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="border border-lastname text-lastname text-sm px-5 py-2 rounded-md hover:border-firstname hover:text-firstname transition-colors w-fit"
+                                    >
+                                        View on GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        )
+                    })}
+                </div>
+
+                <div className="flex justify-center mt-16">
+                    <Link to="/projects" className="bg-lastname text-page text-sm px-6 py-3 rounded-full hover:bg-firstname transition-colors">
+                        See more projects
+                    </Link>
+                </div>
+            </div>
+
             <Footer />
         </div>
     )

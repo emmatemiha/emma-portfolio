@@ -24,7 +24,7 @@ export default function Navbar() {
         <li><Link to="/" className="text-navbar-text hover:text-firstname transition-colors duration-200 text-md">home</Link></li>
         <li><Link to="/projects" className="text-navbar-text hover:text-firstname transition-colors duration-200 text-md">projects</Link></li>
         <li><Link to="/experience" className="text-navbar-text hover:text-firstname transition-colors duration-200 text-md">experience</Link></li>
-        <li><a href="/emma-cv.pdf" target="_blank" rel="noopener noreferrer" className="text-navbar-text hover:text-firstname transition-colors duration-200 text-md">cv</a></li>
+        <li><a href={`${import.meta.env.BASE_URL}emma-cv.pdf`} target="_blank" rel="noopener noreferrer" className="text-navbar-text hover:text-firstname transition-colors duration-200 text-md">cv</a></li>
       </ul>
 
       <div className="text-roles text-right text-sm hidden md:block">

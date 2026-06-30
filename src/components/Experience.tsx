@@ -4,12 +4,6 @@ import Footer from './Footer'
 export default function Experience() {
     return (
         <div className="min-h-screen">
-            <div className="flex items-center gap-4 mb-11 pt-6">
-                <div className="h-px flex-1 bg-gradient-to-r from-transparent via-accent-border" />
-                <span className="text-diamonds">✦</span>
-                <div className="h-px flex-1 bg-gradient-to-l from-transparent via-accent-border" />
-            </div>
-
             <div className="px-8 max-w-5xl mx-auto">
                 <h2 className="text-4xl font-script font-bold text-lastname text-center mb-12">
                     Experience
