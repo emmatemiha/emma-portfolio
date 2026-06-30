@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { projects } from '../data/project'
 
 export default function Home() {
-    const featuredProjects = projects.slice(0, 4)
+    const featuredProjects = projects.slice(0, 2)
 
     return (
         <div className="pt-24 min-h-screen">

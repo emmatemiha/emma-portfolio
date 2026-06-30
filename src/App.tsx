@@ -3,10 +3,12 @@ import Navbar from './components/Navbar'
 import Home from './components/Home'
 import Experience from './components/Experience'
 import Projects from './components/Project'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
     <HashRouter>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
