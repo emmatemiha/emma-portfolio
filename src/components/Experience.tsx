@@ -1,4 +1,5 @@
 import { experiences } from '../data/experience'
+import Footer from './Footer'
 
 export default function Experience() {
     return (
@@ -69,6 +70,7 @@ export default function Experience() {
                     })}
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }

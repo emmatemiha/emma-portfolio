@@ -1,4 +1,5 @@
-import emmaImage from "../assets/images/me.png";
+import emmaImage from "../assets/images/me.png"
+import Footer from './Footer'
 
 export default function Home() {
     return (
@@ -63,6 +64,7 @@ export default function Home() {
                     ))}
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }

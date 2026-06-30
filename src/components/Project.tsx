@@ -1,5 +1,6 @@
 import { projects } from "../data/project"
 import { useState } from 'react'
+import Footer from './Footer'
 
 export default function Projects() {
     const [selectedImage, setSelectedImage] = useState<string | null>(null)
@@ -69,7 +70,7 @@ export default function Projects() {
                     />
                 </div>
             )}
-
+            <Footer />
         </div>
     )
 }
