@@ -32,12 +32,18 @@ export default function Projects() {
                                 transition={{ duration: 0.6, ease: 'easeOut' }}
                             >
                                 <div className="flex-1">
-                                    <img
-                                        src={project.image}
-                                        alt={project.title}
-                                        className="w-full rounded-xl cursor-pointer"
+                                    <motion.div
+                                        whileHover={{ scale: 1.03 }}
+                                        transition={{ duration: 0.3, ease: 'easeOut' }}
+                                        className="rounded-xl overflow-hidden cursor-pointer"
                                         onClick={() => setSelectedImage(project.image)}
-                                    />
+                                    >
+                                        <img
+                                            src={project.image}
+                                            alt={project.title}
+                                            className="w-full rounded-xl cursor-pointer"
+                                        />
+                                    </motion.div>
                                 </div>
 
                                 <div className={`flex-1 flex flex-col items-center text-center ${isLeft ? 'md:items-start md:text-left' : 'md:items-end md:text-right'}`}>

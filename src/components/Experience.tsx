@@ -1,13 +1,19 @@
 import { experiences } from '../data/experience'
 import Footer from './Footer'
+import { motion } from "motion/react"
 
 export default function Experience() {
     return (
         <div className="min-h-screen">
             <div className="pt-24 px-8 max-w-6xl mx-auto">
-                <h2 className="text-4xl font-script font-bold text-lastname text-center mb-8">
+                <motion.h2
+                    className="text-4xl font-script font-bold text-lastname text-center mb-8"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                >
                     Experience
-                </h2>
+                </motion.h2>
 
                 <div className="relative">
                     {/*centre line*/}
@@ -20,7 +26,14 @@ export default function Experience() {
                         const isLeft = index % 2 === 0
 
                         return (
-                            <div key={exp.id} className="relative flex items-center mb-4">
+                            <motion.div
+                                key={exp.id}
+                                className="relative flex items-center mb-4"
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, amount: 0.3 }}
+                                transition={{ duration: 0.5, ease: 'easeOut' }}
+                            >
                                 {/*small screen layout*/}
                                 <div className="flex md:hidden w-full pl-12">
                                     <div className="absolute left-4 -translate-x-1/2 top-1/2 -translate-y-1/2 w-4 h-4 bg-lastname rounded-full border-4 border-accent z-10" />
@@ -59,7 +72,7 @@ export default function Experience() {
                                         )}
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
                         )
                     })}
                 </div>

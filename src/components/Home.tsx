@@ -3,6 +3,7 @@ import Footer from './Footer'
 import { Link } from 'react-router-dom'
 import { projects } from '../data/project'
 import { motion } from "motion/react"
+import { useState } from 'react'
 
 const fadeUp = {
     hidden: { opacity: 0, y: 30 },
@@ -33,6 +34,7 @@ const fadeRight = {
 
 export default function Home() {
     const featuredProjects = projects.slice(0, 2)
+    const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
     return (
         <div className="pt-24 min-h-screen overflow-x-hidden">
@@ -168,11 +170,18 @@ export default function Home() {
                                 transition={{ duration: 0.6, ease: 'easeOut' }}
                             >
                                 <div className="flex-1">
-                                    <img
-                                        src={project.image}
-                                        alt={project.title}
-                                        className="w-full rounded-xl"
-                                    />
+                                    <motion.div
+                                        whileHover={{ scale: 1.03 }}
+                                        transition={{ duration: 0.3, ease: 'easeOut' }}
+                                        className="rounded-xl overflow-hidden cursor-pointer"
+                                        onClick={() => setSelectedImage(project.image)}
+                                    >
+                                        <img
+                                            src={project.image}
+                                            alt={project.title}
+                                            className="w-full rounded-xl"
+                                        />
+                                    </motion.div>
                                 </div>
 
                                 <div className={`flex-1 flex flex-col ${isLeft ? 'md:items-start md:text-left' : 'md:items-end md:text-right'} items-center text-center`}>
@@ -207,6 +216,16 @@ export default function Home() {
                     </motion.div>
                 </div>
             </div>
+
+            {selectedImage && (
+                <div
+                className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-8"
+                onClick={() => setSelectedImage(null)}
+                >
+                <img src={selectedImage} alt="Enlarged" className="max-w-full max-h-full rounded-xl object-contain" />
+                </div>
+            )}
+
             <Footer />
         </div>
     )
