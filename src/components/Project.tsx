@@ -1,6 +1,7 @@
 import { projects } from "../data/project"
 import { useState } from 'react'
 import Footer from './Footer'
+import { motion } from "motion/react"
 
 export default function Projects() {
     const [selectedImage, setSelectedImage] = useState<string | null>(null)
@@ -9,17 +10,26 @@ export default function Projects() {
         <div className="pt-24 min-h-screen overflow-x-hidden">
             <div className="px-8 max-w-6xl mx-auto">
 
-                <h2 className="text-4xl font-script font-bold text-lastname text-center mb-8">
+                <motion.h2
+                    className="text-4xl font-script font-bold text-lastname text-center mb-8"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                >
                     Projects
-                </h2>
+                </motion.h2>
 
                 <div className="px-8 max-w-6xl mx-auto flex flex-col gap-16">
                     {projects.map((project, index) => {
                         const isLeft = index % 2 === 0
                         return (
-                            <div
+                            <motion.div
                                 key={project.id}
                                 className={`flex flex-col md:flex-row items-center gap-8 ${!isLeft ? 'md:flex-row-reverse' : ''}`}
+                                initial={{ opacity: 0, y: 40 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, amount: 0.2 }}
+                                transition={{ duration: 0.6, ease: 'easeOut' }}
                             >
                                 <div className="flex-1">
                                     <img
@@ -39,16 +49,18 @@ export default function Projects() {
                                         ))}
                                     </div>
                             
-                                    <a
+                                    <motion.a
                                         href={project.githubUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="border border-lastname text-lastname text-sm px-5 py-2 rounded-md hover:border-firstname hover:text-firstname transition-colors w-fit"
+                                        whileHover={{ scale: 1.05 }}
+                                        transition={{ duration: 0.2 }}
                                     >
                                         View on GitHub
-                                    </a>
+                                    </motion.a>
                                 </div>
-                            </div>
+                            </motion.div>
                         )
                     })}
                 </div>
