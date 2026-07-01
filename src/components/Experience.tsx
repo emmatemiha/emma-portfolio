@@ -4,8 +4,8 @@ import Footer from './Footer'
 export default function Experience() {
     return (
         <div className="min-h-screen">
-            <div className="px-8 max-w-5xl mx-auto">
-                <h2 className="text-4xl font-script font-bold text-lastname text-center mb-12">
+            <div className="pt-24 px-8 max-w-6xl mx-auto">
+                <h2 className="text-4xl font-script font-bold text-lastname text-center mb-8">
                     Experience
                 </h2>
 
