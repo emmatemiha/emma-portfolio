@@ -5,15 +5,6 @@ import { projects } from '../data/project'
 import { motion } from "motion/react"
 import { useState } from 'react'
 
-const fadeUp = {
-    hidden: { opacity: 0, y: 30 },
-    visible: (delay: number) => ({
-        opacity: 1,
-        y: 0,
-        transition: { duration: 0.6, ease: 'easeOut' as const, delay }
-    })
-}
-
 const fadeLeft = {
     hidden: { opacity: 0, x: -40 },
     visible: (delay: number) => ({
@@ -33,7 +24,7 @@ const fadeRight = {
 }
 
 export default function Home() {
-    const featuredProjects = projects.slice(0, 2)
+    const featuredProjects = projects.slice(0, 3)
     const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
     return (
@@ -131,7 +122,7 @@ export default function Home() {
                     transition={{ duration: 1.0 }}
                 >
                     {[ 'Python', 'JavaScript', 'TypeScript', 'C++', 'HTML', 'Tailwind CSS', 'React'
-                    ].map((tech, i) => (
+                    ].map((tech) => (
                         <div key={tech} className="flex items-center gap-2 bg-white border border-accent-border rounded-full px-4 py-2">
                             <div className="w-2 h-2 rounded-full bg-titles" />
                             <span className="text-sm text-lastname">{tech}</span>
@@ -192,16 +183,31 @@ export default function Home() {
                                             <span key={tag} className="bg-accent text-lastname text-xs px-3 py-1 rounded-full">{tag}</span>
                                         ))}
                                     </div>
-                                    <motion.a
-                                        href={project.githubUrl}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="border border-lastname text-lastname text-sm px-5 py-2 rounded-md hover:border-firstname hover:text-firstname transition-colors w-fit"
-                                        whileHover={{ scale: 1.05 }}
-                                        transition={{ duration: 0.2 }}
-                                    >
-                                        View on GitHub
-                                    </motion.a>
+                                    <div className="flex gap-3">
+                                        <motion.a
+                                            href={project.githubUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="border border-lastname text-lastname text-sm px-5 py-2 rounded-md hover:border-firstname hover:text-firstname transition-colors w-fit"
+                                            whileHover={{ scale: 1.05 }}
+                                            transition={{ duration: 0.2 }}
+                                        >
+                                            View on GitHub
+                                        </motion.a>
+
+                                        {project.figmaUrl && (
+                                            <motion.a
+                                                href={project.figmaUrl}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="border border-lastname text-lastname text-sm px-5 py-2 rounded-md hover:border-firstname hover:text-firstname transition-colors w-fit"
+                                                whileHover={{ scale: 1.05 }}
+                                                transition={{ duration: 0.2 }}
+                                            >
+                                                View on Figma
+                                            </motion.a>
+                                        )}
+                                    </div>
                                 </div>
                             </motion.div>
                         )

@@ -54,17 +54,31 @@ export default function Projects() {
                                             <span key={tag} className="bg-accent text-lastname text-xs px-3 py-1 rounded-full">{tag}</span>
                                         ))}
                                     </div>
-                            
-                                    <motion.a
-                                        href={project.githubUrl}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="border border-lastname text-lastname text-sm px-5 py-2 rounded-md hover:border-firstname hover:text-firstname transition-colors w-fit"
-                                        whileHover={{ scale: 1.05 }}
-                                        transition={{ duration: 0.2 }}
-                                    >
-                                        View on GitHub
-                                    </motion.a>
+                                    <div className="flex gap-3">
+                                        <motion.a
+                                            href={project.githubUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="border border-lastname text-lastname text-sm px-5 py-2 rounded-md hover:border-firstname hover:text-firstname transition-colors w-fit"
+                                            whileHover={{ scale: 1.05 }}
+                                            transition={{ duration: 0.2 }}
+                                        >
+                                            View on GitHub
+                                        </motion.a>
+
+                                        {project.figmaUrl && (
+                                            <motion.a
+                                                href={project.figmaUrl}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="border border-lastname text-lastname text-sm px-5 py-2 rounded-md hover:border-firstname hover:text-firstname transition-colors w-fit"
+                                                whileHover={{ scale: 1.05 }}
+                                                transition={{ duration: 0.2 }}
+                                            >
+                                                View on Figma
+                                            </motion.a>
+                                        )}
+                                    </div>
                                 </div>
                             </motion.div>
                         )
