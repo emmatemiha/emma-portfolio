@@ -2,7 +2,7 @@ import emmaImage from "../assets/images/me.png"
 import Footer from './Footer'
 import { Link } from 'react-router-dom'
 import { projects } from '../data/project'
-import { motion } from "motion/react"
+import { motion, easeOut } from "motion/react"
 import { useState } from 'react'
 
 const fadeLeft = {
@@ -10,7 +10,7 @@ const fadeLeft = {
     visible: (delay: number) => ({
         opacity: 1,
         x: 0,
-        transition: { duration: 0.6, ease: 'easeOut', delay }
+        transition: { duration: 0.6, ease: easeOut, delay }
     })
 }
 
@@ -19,7 +19,7 @@ const fadeRight = {
     visible: {
         opacity: 1,
         x: 0,
-        transition: { duration: 0.7, ease: 'easeOut', delay: 0.3 }
+        transition: { duration: 0.7, ease: easeOut, delay: 0.3 }
     }
 }
 
