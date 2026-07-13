@@ -33,7 +33,7 @@ export const projects: Project[] = [
     },
     {
         id: 3,
-        title: "Catalog",
+        title: "Catalog (WIP)",
         description: "A mobile app for cataloging neighborhood cats you spot on walks, with photo logging, a map of sightings, personality profiles and daily quests that gamify exploring your area. Designed in Figma and built with React Native (Expo).",
         image: project3Image,
         tags: ["React Native", "Expo", "Figma", "react-native-maps"],

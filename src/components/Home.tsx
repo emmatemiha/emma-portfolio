@@ -24,7 +24,7 @@ const fadeRight = {
 }
 
 export default function Home() {
-    const featuredProjects = projects.slice(0, 3)
+    const featuredProjects = projects.slice(1, 4)
     const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
     return (
