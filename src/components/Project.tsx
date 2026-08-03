@@ -9,16 +9,6 @@ export default function Projects() {
     return (
         <div className="pt-24 min-h-screen overflow-x-hidden">
             <div className="px-8 max-w-6xl mx-auto">
-
-                <motion.h2
-                    className="text-4xl font-script font-bold text-lastname text-center mb-8"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                >
-                    Projects
-                </motion.h2>
-
                 <div className="px-8 max-w-6xl mx-auto flex flex-col gap-16">
                     {projects.map((project, index) => {
                         const isLeft = index % 2 === 0

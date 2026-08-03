@@ -6,15 +6,6 @@ export default function Experience() {
     return (
         <div className="min-h-screen">
             <div className="pt-24 px-8 max-w-6xl mx-auto">
-                <motion.h2
-                    className="text-4xl font-script font-bold text-lastname text-center mb-8"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                >
-                    Experience
-                </motion.h2>
-
                 <div className="relative">
                     {/*centre line*/}
                     <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-accent-border" />

@@ -68,7 +68,7 @@ export default function Home() {
                             custom={0.45}
                         >
                             Kia Ora! I'm a final-year Computer Science student at the University of Canterbury who enjoys
-                            building fun web interfaces and exploring the creative side of software.
+                            building fun web interfaces and exploring the creative side of software ˶ᵔ ᵕ ᵔ˶
                         </motion.p>
                     </div>
 
@@ -95,7 +95,7 @@ export default function Home() {
                             <div className="relative w-64 md:w-80 flex flex-col bg-white items-center rounded-sm px-6 pt-6 pb-6">
                                 <img src={emmaImage} alt="Emma"
                                     className="w-48 h-48 rounded-full object-cover bg-accent border-4 border-accent-border mb-4"
-                                    style={{ objectPosition: '20% -40%' }}
+                                    style={{ objectPosition: '20% 40%' }}
                                 />
                                 <p className="text-lastname font-script text-2xl">me ⤴</p>
                                 <p className="text-roles font-sans text-xs text-center">enjoys: weighlifting, hiking, watching shows & cats!</p>
