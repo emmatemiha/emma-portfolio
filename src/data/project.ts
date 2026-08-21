@@ -1,8 +1,8 @@
-import project1Image from "../assets/images/project1.2.png";
-import project2Image from "../assets/images/project2.2.png";
-import project3Image from "../assets/images/project5.2.png";
-import project4Image from "../assets/images/project3.2.png";
-import project5Image from "../assets/images/project4.2.png";
+import project1Image from "../assets/images/project3.3.png";
+import project2Image from "../assets/images/project2.3.png";
+import project3Image from "../assets/images/project1.3.png";
+import project4Image from "../assets/images/project4.3.png";
+import project5Image from "../assets/images/project5.3.png";
 
 export interface Project {
     id: number
@@ -17,11 +17,11 @@ export interface Project {
 export const projects: Project[] = [
     {
         id: 1,
-        title: "Emma's Personal Portfolio",
-        description: "What you're looking at now! Includes a personal summary, experience, projects and contact details sections.",
-        image: project1Image,
-        tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion"],
-        githubUrl: "https://github.com/emmatemiha/emma-portfolio"
+        title: "Catalog",
+        description: "A mobile app for cataloging neighborhood cats you spot on walks, with photo logging, personality profiles and daily quests that gamify exploring your area.",
+        image: project3Image,
+        tags: ["Kotlin", "Jetpack Compose"],
+        githubUrl: "https://eng-git.canterbury.ac.nz/ete42/catalog-app"
     },
     {
         id: 2,
@@ -33,12 +33,11 @@ export const projects: Project[] = [
     },
     {
         id: 3,
-        title: "Catalog (WIP)",
-        description: "A mobile app for cataloging neighborhood cats you spot on walks, with photo logging, a map of sightings, personality profiles and daily quests that gamify exploring your area. Designed in Figma and built with React Native (Expo).",
-        image: project3Image,
-        tags: ["React Native", "Expo", "Figma", "react-native-maps"],
-        githubUrl: "https://github.com/emmatemiha/catalog-app",
-        figmaUrl: "https://www.figma.com/proto/Wf6tzm4nEdoyhNvm6xq2ik/Untitled?node-id=0-1&t=XMcuoNKUcoljkCLX-1"
+        title: "Portfolio Website",
+        description: "What you're looking at now! Includes a personal summary, experience, projects and contact details.",
+        image: project1Image,
+        tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion"],
+        githubUrl: "https://github.com/emmatemiha/emma-portfolio"
     },
     {
         id: 4,

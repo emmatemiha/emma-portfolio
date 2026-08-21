@@ -55,19 +55,6 @@ export default function Projects() {
                                         >
                                             View on GitHub
                                         </motion.a>
-
-                                        {project.figmaUrl && (
-                                            <motion.a
-                                                href={project.figmaUrl}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="border border-lastname text-lastname text-sm px-5 py-2 rounded-md hover:border-firstname hover:text-firstname transition-colors w-fit"
-                                                whileHover={{ scale: 1.05 }}
-                                                transition={{ duration: 0.2 }}
-                                            >
-                                                View on Figma
-                                            </motion.a>
-                                        )}
                                     </div>
                                 </div>
                             </motion.div>
